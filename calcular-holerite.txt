@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    float reajusteSalarial, porcentagemReajuste, salarioLiquido, novoSalario1, novoSalario2, salarioBase, abonoSalario;
+
+
+     // Entrada de Dados
+    printf ("EMPRESA - LGM COMERCIO E SERVICOS LTDA. \n");
+    printf("-----------------------------------------\n");
+    printf("NOME: LEANDRO DE BARROS RA: 13373285\n");
+    printf("-----------------------------------------\n");
+    printf("-----------------------------------------\n");
+    
+    printf("Digite seu salario: \n");
+    scanf("%f", &salarioLiquido);
+    
+    printf("-----------------------------------------\n");
+    
+    // Calculo do Aumento de salario
+      abonoSalario = 150.00;
+      salarioBase = 1750.00;
+      porcentagemReajuste = 0.075;
+    
+      reajusteSalarial = salarioLiquido * porcentagemReajuste;
+    
+      if (salarioLiquido <= salarioBase) {
+            novoSalario1 = salarioLiquido + reajusteSalarial + abonoSalario;
+            printf("$$ REAJUSTE COM ABONO SALARIAL! $$\n");
+    
+      } else {
+            if (salarioLiquido > salarioBase) {
+            novoSalario2 = salarioLiquido + reajusteSalarial;
+            
+            printf("XX REAJUSTE SEM ABONO SALARIAL! XX\n");
+            }
+      }      
+    
+             // Exibicao dos resultados
+             printf("SALARIO ATUAL........: R$ %5.2f\n", salarioLiquido);
+             printf("REAJUSTE DO SALARIO........: R$ %5.2f\n", reajusteSalarial);
+             printf("ABONO SALARIAL.......: R$ %5.2f\n", abonoSalario);
+             printf("NOVO SALARIO COM ABONO.......: R$ %5.2f\n", novoSalario1);
+             printf("NOVO SALARIO SEM ABONO.......: R$ %5.2f\n", novoSalario2);
+
+  return (0);
+}
